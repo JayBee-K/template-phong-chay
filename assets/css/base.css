@@ -176,6 +176,10 @@ input[type='number'] {
     gap: 5px;
 }
 
+.gap-8px {
+    gap: 8px;
+}
+
 .gap-10px {
     gap: 10px;
 }
