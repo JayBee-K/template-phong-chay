@@ -102,6 +102,12 @@
 	border: 1px solid var(--primary-color);
 }
 
+.button-theme.button-theme_primary:hover {
+	color: var(--bs-white);
+	background: var(--primary-hover);
+	border: 1px solid var(--primary-hover);
+}
+
 .button-theme.button-theme_gradient {
 	border: 1px solid var(--primary-color);
 	color: var(--primary-color);
