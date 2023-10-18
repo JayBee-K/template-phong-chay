@@ -1,36 +1,374 @@
-const handleSliderTabsProduct = function () {
-	if ($('.slider-tabs').length) {
-		$('.slider-tabs').each(function () {
-			const sliderItem = '#' + $(this).attr('id');
+var windowWidth = document.documentElement.clientWidth;
+window.addEventListener("resize", () => {
+    windowWidth = document.documentElement.clientWidth;
+});
 
-			new Swiper(sliderItem + ' .swiper', {
-				speed: 1000,
-				slidesPerView: 4,
-				preloadImages: false,
-				spaceBetween: 16,
-				breakpoints: {
-					320: {
-						slidesPerView: 1.25,
-						spaceBetween: 10,
-					}, 768: {
-						slidesPerView: 2.25,
-						spaceBetween: 10,
-					}, 991: {
-						slidesPerView: 3.25,
-						spaceBetween: 10,
-					}, 1200: {
-						slidesPerView: 4,
-					}
-				},
-				navigation: {
-					nextEl: sliderItem + " .slider-button_next",
-					prevEl: sliderItem + " .slider-button_prev",
-				},
-			});
-		});
-	}
+let handleApplyCollapse = function ($parent, $firstItem = false, $callFunction = false) {
+    let $childUl = $parent.find('> li > ul');
+    if ($childUl.length === 0) {
+        return;
+    }
+
+    if ($callFunction) {
+        $parent.find('> li a').each(function () {
+            $(this).attr('data-href', $(this).attr('href'))
+        });
+    }
+
+    if (windowWidth <= 991) {
+
+        let $objParentAttr = {};
+        let $objChildrenAttr = {
+            'data-bs-parent': '#' + $parent.attr('id')
+        }
+
+        if ($firstItem) {
+            let $parentID = 'menu-' + Math.random().toString(36).substring(7);
+            $parent.attr('id', $parentID);
+            $objParentAttr = {
+                'data-bs-parent': '#' + $parentID
+            }
+
+            $objChildrenAttr = {};
+        }
+
+        $childUl.each(function () {
+            let $parentUl = $(this).closest('ul');
+            let $parentListItem = $(this).closest('li');
+            let $parentListItemAnchor = $parentListItem.children('a');
+
+            let $parentUlID = 'menu-' + Math.random().toString(36).substring(7);
+
+            $parentUl.addClass('collapse').attr({
+                'id': 'collapse-' + $parentUlID, ...$objParentAttr, ...$objChildrenAttr
+            });
+
+            $parentListItemAnchor.replaceWith(function () {
+                return `<button aria-label="${$parentListItemAnchor.attr('aria-label')}" data-href="${$parentListItemAnchor.attr('data-href')}" data-bs-toggle="collapse" data-bs-target="#${$parentUl.attr('id')}">${$parentListItemAnchor.html()}</button>`
+            })
+
+            handleApplyCollapse($parentUl, false);
+
+            $parentUl.on('show.bs.collapse', function () {
+                $parent.find('.collapse.show').not($parentUl).collapse('hide');
+            });
+        });
+    } else {
+        $parent.removeAttr('id');
+
+        $childUl.each(function () {
+            let $parentUl = $(this).closest('ul');
+            let $parentListItem = $(this).closest('li');
+
+            $parentUl.removeClass('collapse').removeAttr('data-bs-parent id');
+            $parentListItem.children('a').attr('href', $parentListItem.children('a').attr('data-href'));
+
+            $parentListItem.children('button').replaceWith(function () {
+                return `<a aria-label="${$(this).attr('aria-label')}" href="${$(this).attr('data-href')}" data-href="${$(this).attr('data-href')}">${$(this).html()}</a>`
+            })
+
+            handleApplyCollapse($parentUl);
+        });
+    }
+}
+
+let handleCallMenu = function () {
+    const $body = $('body');
+    const handleBody = function ($toggle = false) {
+        if ($body.hasClass('is-navigation')) {
+            $body.removeClass('is-navigation');
+            if ($body.hasClass('is-overflow')) {
+                $body.removeClass('is-overflow');
+            }
+
+            $('#header-navigation ul').collapse('hide');
+        } else {
+            if ($toggle) {
+                $body.addClass('is-navigation is-overflow')
+            }
+        }
+    }
+
+    if (windowWidth <= 991) {
+        const $hamburger = $('#hamburger-button');
+        if ($hamburger.length) {
+            $hamburger.click(function () {
+                handleBody(true)
+            });
+        }
+
+        const $overlay = $('#header-overlay');
+        if ($overlay.length) {
+            $overlay.click(function () {
+                handleBody();
+            });
+        }
+    } else {
+        handleBody();
+    }
+}
+
+
+const handleCategoryBar = function () {
+    const buttonCall = $('#callCategory');
+    const category = $('#header-category');
+    if (category.length && buttonCall.length) {
+        buttonCall.click(function () {
+            if (category.hasClass('is-default') == true) {
+                return;
+            }
+
+            if (category.hasClass('is-show') == false) {
+                category.addClass('is-show');
+            } else {
+                category.removeClass('is-show');
+            }
+        });
+    }
+}
+
+const handleSliderHero = function () {
+    if ($('#slider-hero').length) {
+        new Swiper('#slider-hero .swiper', {
+            speed: 500,
+            slidesPerView: 1,
+            preloadImages: false,
+            effect: 'fade',
+            loop: true,
+            autoplay: {
+                delay: 8000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: "#slider-hero .slider-pagination",
+                clickable: true
+            },
+        });
+    }
+}
+
+const handleSliderService = function () {
+    if ($('#slider-service').length) {
+        new Swiper('#slider-service .swiper', {
+            speed: 1000,
+            slidesPerView: 4,
+            preloadImages: false,
+            spaceBetween: 16,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.25,
+                    spaceBetween: 10,
+                    grid: {
+                        rows: 2,
+                        fill: "row",
+                    },
+                },
+                991: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                    grid: {
+                        rows: 2,
+                        fill: "row",
+                    },
+                },
+                1200: {
+                    slidesPerView: 4,
+                }
+            },
+        });
+    }
+}
+
+const handleSliderTabsProduct = function () {
+    if ($('.slider-tabs').length) {
+        $('.slider-tabs').each(function () {
+            const sliderItem = '#' + $(this).attr('id');
+
+            new Swiper(sliderItem + ' .swiper', {
+                speed: 1000,
+                slidesPerView: 4,
+                preloadImages: false,
+                spaceBetween: 16,
+                breakpoints: {
+                    320: {
+                        slidesPerView: 2,
+                        spaceBetween: 10,
+                        grid: {
+                            rows: 2,
+                            fill: "row",
+                        },
+                    },
+                    991: {
+                        slidesPerView: 3,
+                        spaceBetween: 10,
+                        grid: {
+                            rows: 2,
+                            fill: "row",
+                        },
+                    },
+                    1200: {
+                        slidesPerView: 4,
+                    }
+                },
+                navigation: {
+                    nextEl: sliderItem + " .slider-button_next",
+                    prevEl: sliderItem + " .slider-button_prev",
+                },
+            });
+        });
+    }
+}
+
+const handleSliderIntroduction = function () {
+    if ($('#slider-introduction').length) {
+        new Swiper('#slider-introduction .swiper', {
+            speed: 1000,
+            slidesPerView: 4,
+            preloadImages: false,
+            spaceBetween: 16,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.25,
+                    spaceBetween: 16,
+                },
+                768: {
+                    slidesPerView: 2.25,
+                    spaceBetween: 16,
+                },
+                991: {
+                    slidesPerView: 3.25,
+                    spaceBetween: 16,
+                },
+                1200: {
+                    slidesPerView: 4,
+                }
+            },
+        });
+    }
+}
+
+const handleCart = function () {
+    const floatingCart = $('#floatingCart');
+
+    if (floatingCart.length) {
+        /***
+         * Xử lý đóng mở giỏ hàng
+         * Xử lý render html product trong giỏ hàng
+         */
+        const handleToggleCart = function (hasProduct = false) {
+            const btnCall = $('#callCart');
+            const btnCallMobile = $('#callCartMobile');
+            const btnClose = $('#closeCart');
+            const floatingOverlay = $('#floatingOverlay');
+            const body = $('body');
+
+            btnCall.add(btnCallMobile).click(function () {
+                body.addClass('is-cart');
+            });
+
+            btnClose.add(floatingOverlay).click(function () {
+                body.removeClass('is-cart');
+            });
+
+            if (hasProduct == true) {
+                const htmlProduct = `<div class="card-item align-items-start gap-10px hstack">
+                            <div class="card-image flex-shrink-0">
+                                <a href="" class="d-inline-flex align-middle">
+                                    <img src="./assets/images/product/Dau-bao-khoi-CM-1.jpg"
+                                         class="w-100 img-fluid transition-default" alt="">
+                                </a>
+                            </div>
+                            <div class="card-content flex-fill">
+                                <a href="" class="card-title limit">
+                                    Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt Nam
+                                </a>
+                                <div class="hstack gap-8px justify-content-between">
+                                    <div class="card-quantity w-50 flex-fill">
+                                        <div class="card-text">
+                                            Số lượng
+                                        </div>
+                                        <div class="card-group hstack flex-nowrap">
+                                            <button disabled
+                                                    class="link-default hstack justify-content-center flex-shrink-0 card-quantity_btn">
+                                                <i class="fal fa-minus"></i>
+                                            </button>
+                                            <input type="text" class="form-control card-quantity_input" value="1">
+                                            <button class="link-default hstack justify-content-center flex-shrink-0 card-quantity_btn">
+                                                <i class="fal fa-plus"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="card-desc w-50 flex-fill text-end">
+                                        <div class="card-price">
+                                            6.950.000₫
+                                        </div>
+                                        <div class="card-clear">
+                                            <button class="link-default buttonDelete">Xóa</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+                const listProduct = $('#cardList');
+
+                listProduct.append(htmlProduct)
+
+                body.addClass('is-cart');
+                floatingCart.addClass('is-product');
+                handleDeleteProductCart();
+            }
+        }
+
+        /***
+         * Xử lý nút thêm sản phẩm vào giỏ hàng
+         */
+        const handleAddProductCart = function () {
+            const buttonAdds = $('.buttonCart');
+            if (buttonAdds.length) {
+                buttonAdds.click(function () {
+                    handleToggleCart(true);
+                })
+            }
+        }
+
+
+        /***
+         * Xử lý nút xóa sản phẩm khỏi giỏ hàng
+         */
+        const handleDeleteProductCart = function () {
+            const buttonDeletes = $('.buttonDelete');
+            buttonDeletes.click(function () {
+                const buttonDelete = $(this);
+                const itemProduct = buttonDelete.closest('.card-item');
+                itemProduct.fadeOut(function () {
+                    itemProduct.remove();
+
+                    if (floatingCart.find('#cardList .card-item').length === 0) {
+                        floatingCart.removeClass('is-product');
+                    }
+                });
+            })
+        }
+
+        /***
+         * Gọi function
+         */
+        handleToggleCart();
+        handleAddProductCart();
+    }
 }
 
 $(function () {
-	handleSliderTabsProduct();
+    handleApplyCollapse($('#header-navigation > ul'), true, true);
+    handleCallMenu();
+    $(window).resize(function () {
+        handleApplyCollapse($('#header-navigation > ul'));
+        handleCallMenu();
+    });
+    handleCategoryBar();
+    handleSliderHero();
+    handleSliderService();
+    handleSliderTabsProduct();
+    handleSliderIntroduction();
+    handleCart();
 });

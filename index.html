@@ -46,26 +46,353 @@
 <div id="header" class="header">
     <div class="header-top">
         <div class="container">
-            <div class="row g-4 align-items-center justify-content-lg-between">
+            <div class="row align-items-center justify-content-lg-between">
                 <div class="col-lg-auto">
                     <div class="header-text text-white">
                         Công ty TNHH PCCC Hải Minh
                     </div>
                 </div>
-                <div class="col-lg-auto">
+                <div class="col-lg-auto d-none d-lg-block">
                     <div class="header-actions hstack gap-20px">
-                        <a href="" class="header-actions_item hstack gap-8px">
-                            <i class="fas fa-user"></i>
-                            Tài khoản
-                        </a>
-                        <a href="" class="header-actions_item hstack gap-8px">
-                            <i class="fas fa-fire-extinguisher"></i>
-                            Sản phẩm
-                        </a>
-                        <a href="" class="header-actions_item hstack gap-8px">
-                            <i class="fas fa-map-marker-alt"></i>
-                            Hệ thống cửa hàng
-                        </a>
+                        <div class="header-actions_item hstack gap-5px position-relative">
+                            <a href="" class="hstack gap-8px position-relative">
+                                <i class="fas fa-user"></i>
+                                Tài khoản
+                            </a>
+                            <i class="fal fa-angle-down"></i>
+                            <ul class="list-unstyled mb-0 position-absolute">
+                                <li>
+                                    <a href="" class="user-item hstack align-items-center">
+                                        Đăng nhập tài khoản
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="user-item hstack align-items-center">
+                                        Thông tin tài khoản
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="user-item hstack align-items-center">
+                                        Đơn hàng của bạn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="user-item hstack align-items-center">
+                                        Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-actions_item hstack gap-5px">
+                            <a href="" class="hstack gap-8px position-relative">
+                                <i class="fas fa-fire-extinguisher"></i>
+                                Sản phẩm
+                            </a>
+                        </div>
+                        <div class="header-actions_item hstack gap-5px">
+                            <a href="" class="hstack gap-8px position-relative">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Hệ thống cửa hàng
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-middle">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3">
+                    <div class="header-group hstack">
+                        <div class="header-hamburger d-flex d-lg-none">
+                            <button type="button" class="hamburger-button" id="hamburger-button">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </button>
+                        </div>
+                        <div class="header-logo">
+                            <a href="" class="d-inline-flex align-middle">
+                                <img src="./assets/images/logo.png" class="mw-100" alt="">
+                            </a>
+                        </div>
+                        <div class="header-user ms-auto d-flex d-lg-none">
+                            <button type="button" class="link-default hstack gap-8px position-relative">
+                                <i class="far fa-user"></i>
+                            </button>
+                            <ul class="list-unstyled mb-0 position-absolute">
+                                <li>
+                                    <a href="" class="user-item hstack align-items-center">
+                                        Đăng nhập tài khoản
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="user-item hstack align-items-center">
+                                        Thông tin tài khoản
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="user-item hstack align-items-center">
+                                        Đơn hàng của bạn
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" class="user-item hstack align-items-center">
+                                        Đăng xuất
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="header-cart d-flex d-lg-none">
+                            <button type="button" class="link-default" id="callCartMobile">
+                                <i class="far fa-shopping-bag"></i>(5)
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block">
+                    <form action="">
+                        <div class="header-form hstack position-relative overflow-hidden">
+                            <input type="text" placeholder="Nhập tên sản phẩm bạn muốn tìm..." class="form-control">
+                            <button type="submit" class="link-default position-absolute top-50 translate-middle-y"><i
+                                    class="fal fa-search"></i></button>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4 d-none d-lg-block">
+                    <div class="header-contact hstack gap-30px">
+                        <div class="header-contact_item hstack gap-8px position-relative overflow-hidden">
+                            <div class="contact-item_icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="contact-item_content">
+                                <div class="contact-item_title">
+                                    Gọi đặt hàng
+                                </div>
+                                <div class="contact-item_value">
+                                    0919.882.114
+                                </div>
+                            </div>
+                            <a href="" class="stretched-link"></a>
+                        </div>
+                        <div class="header-contact_item hstack gap-8px position-relative overflow-hidden">
+                            <div class="contact-item_icon">
+                                <i class="fas fa-user-headset"></i>
+                            </div>
+                            <div class="contact-item_content">
+                                <div class="contact-item_title">
+                                    Gọi tư vấn
+                                </div>
+                                <div class="contact-item_value">
+                                    0919.882.114
+                                </div>
+                            </div>
+                            <a href="" class="stretched-link"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-3 d-none d-xl-block">
+                    <div class="header-category is-default" id="header-category">
+                        <button class="link-default" id="callCategory">
+                            <i class="fal fa-bars me-2"></i>Danh mục sản phẩm
+                        </button>
+                        <div class="category-list">
+                            <ul>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Báo cháy GST
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Báo cháy Chungmei
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Báo cháy HORING LIH
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Báo cháy YUN-YANG
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Ống nối mềm đầu phun
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>Bình chữa cháy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Đèn Exit và Đèn sự cố
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Đầu phun SPRINGKLER
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Vòi, Van, Trụ chữa cháy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Hộp chữa cháy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Đầu phun SPRINGKLER
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Vòi, Van, Trụ chữa cháy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Hộp chữa cháy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Hộp chữa cháy
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <i class="fal fa-angle-right"></i>
+                                        Hộp chữa cháy
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-xl-7">
+                    <div class="header-navigation" id="header-navigation">
+                        <ul>
+                            <li class="navigation-logo d-flex d-lg-none">
+                                <a href="/"
+                                   class="d-inline-flex align-items-center justify-content-center align-middle">
+                                    <img src="./assets/images/logo.png" class="img-fluid">
+                                </a>
+                            </li>
+                            <li class="navigation-search d-flex d-lg-none">
+                                <form action="">
+                                    <div class="header-form hstack position-relative overflow-hidden">
+                                        <input type="text" placeholder="Nhập tên sản phẩm bạn muốn tìm..."
+                                               class="form-control">
+                                        <button type="submit"
+                                                class="link-default position-absolute top-50 translate-middle-y"><i
+                                                class="fal fa-search"></i></button>
+                                    </div>
+                                </form>
+                            </li>
+                            <li>
+                                <a href=""
+                                   aria-label="">
+                                    Trang chủ
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                   aria-label="">
+                                    Giới thiệu
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                   aria-label="">
+                                    Sản phẩm
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                   aria-label="">
+                                    Chính sách đại lý
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                   aria-label="">
+                                    Tuyển dụng
+                                </a>
+                            </li>
+                            <li>
+                                <a href=""
+                                   aria-label="">
+                                    Tin tức
+                                    <i class="fal fa-angle-down"></i>
+                                </a>
+                                <ul>
+                                    <li>
+                                        <a href="">
+                                            Danh sách tin tức 1
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            Danh sách tin tức 2
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            Danh sách tin tức 3
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="">
+                                            Danh sách tin tức 4
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href=""
+                                   aria-label="">
+                                    Liên hệ
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 d-none d-lg-block">
+                    <div class="header-cart">
+                        <button type="button" class="link-default" id="callCart">
+                            <i class="fas fa-shopping-bag lh-base me-2"></i>
+                            Giỏ hàng (5)
+                        </button>
                     </div>
                 </div>
             </div>
@@ -75,9 +402,36 @@
 </div>
 
 <div id="main" class="main">
+    <div class="section-hero">
+        <div class="container-lg g-0 g-lg-4">
+            <div class="row justify-content-end g-0 g-lg-4">
+                <div class="col-xl-9">
+                    <div class="position-relative slider-theme slider-hero" id="slider-hero">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div class="position-relative">
+                                        <img src="./assets/images/slider/banner1.jpg" class="w-100 img-fluid" alt="">
+                                        <a href="" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="position-relative">
+                                        <img src="./assets/images/slider/banner2.jpg" class="w-100 img-fluid" alt="">
+                                        <a href="" class="stretched-link"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="section-gap section-box">
         <div class="container">
-            <div class="row g-4 row-cols-md-3">
+            <div class="row g-4 row-cols-lg-3 row-cols-1">
                 <div class="col">
                     <div class="box-item hstack gap-15px align-items-start">
                         <div class="box-item_icon flex-shrink-0">
@@ -128,9 +482,137 @@
             </div>
         </div>
     </div>
+    <div class="section-gap section-service d-block d-lg-none">
+        <div class="container">
+            <div class="section-heading">
+                <div class="heading-title">
+                    Danh mục sản phẩm
+                </div>
+                <div class="heading-text">
+                    Mời bạn cùng tham khảo danh mục sản phẩm bán chạy nhất của Hải Minh Group
+                </div>
+            </div>
+            <div class="position-relative slider-theme" id="slider-service">
+                <div class="swiper h-auto">
+                    <div class="swiper-wrapper h-auto">
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Báo cháy GST
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Báo cháy Chungmei
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Báo cháy HORING LIH
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Báo cháy YUN-YANG
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Ống Nối Mềm Đầu Phun
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Bình Chữa Cháy
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Đèn Exits và Đèn Sự Cố
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Đầu phun SPRINGKLER
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Vòi, Van, Trụ chữa cháy
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Hộp chữa cháy
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="service-card position-relative">
+                                <div class="card-image">
+                                    <img src="./assets/images/icon/banner-sp.jpg" class="img-fluid w-100" alt="">
+                                </div>
+                                <div class="card-title">
+                                    Đầu phun SPRINGKLER
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="section-gap section-us">
         <div class="container">
-            <div class="row align-items-center flex-column-reverse flex-lg-row">
+            <div class="row align-items-center">
                 <div class="col-lg-6">
                     <img src="./assets/images/icon/bg-us.png" class="w-100 img-fluid" alt="">
                 </div>
@@ -145,7 +627,8 @@
                             </div>
                         </div>
                         <div class="heading-title heading-title_black">
-                            Chúng tôi là&nbsp;<span>công ty phòng cháy</span>&nbsp;chuyên nghiệp xây nhà trọn gói, chìa
+                            Chúng tôi là&nbsp;<span>công ty phòng cháy</span>&nbsp;chuyên nghiệp xây nhà trọn gói,
+                            chìa
                             khóa trao tay.
                         </div>
                         <div class="heading-text">
@@ -153,8 +636,8 @@
                             nghiệp, luôn mang lại giá trị thiết thực nhất tới khách hàng.
                         </div>
                         <div class="us-inner">
-                            <div class="row g-5">
-                                <div class="col-lg-6">
+                            <div class="row g-4 g-lg-5">
+                                <div class="col-6">
                                     <div class="us-card gap-15px card border-0 bg-transparent p-0 rounded-0">
                                         <div class="card-content hstack align-items-end gap-15px">
                                             <div class="card-icon">
@@ -165,12 +648,13 @@
                                             </div>
                                         </div>
                                         <div class="card-text">
-                                            1000+ dự án ấn tượng đã hoàn thiện và được khách hàng đánh giá cao về tính
+                                            1000+ dự án ấn tượng đã hoàn thiện và được khách hàng đánh giá cao về
+                                            tính
                                             thẩm mỹ cũng như chất lượng
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col-6">
                                     <div class="us-card gap-15px card border-0 bg-transparent p-0 rounded-0">
                                         <div class="card-content hstack align-items-end gap-15px">
                                             <div class="card-icon">
@@ -200,7 +684,7 @@
     </div>
     <div class="section-gap section-counter">
         <div class="container">
-            <div class="row g-4 row-cols-lg-4 row-col-2">
+            <div class="row g-4 row-cols-lg-4 row-cols-2">
                 <div class="col">
                     <div class="counter-card hstack text-white gap-15px card border-0 bg-transparent p-0 rounded-0">
                         <div class="card-icon">
@@ -284,71 +768,91 @@
                     giúp công ty của bạn bán được nhiều hàng và sinh lời mạnh mẽ, chúng tôi sẽ giúp bạn:
                 </div>
             </div>
-            <div class="row g-4 row-cols-lg-4 row-cols-md-2">
-                <div class="col">
-                    <div class="introduction-card card gap-15px justify-content-center text-center border-0 position-relative overflow-hidden">
-                        <div class="card-icon rounded-circle hstack justify-content-center">
-                            <img src="./assets/images/icon/fire-extinguisher.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="card-title">
-                                Thiết kế phòng cháy
-                            </div>
-                            <div class="card-text">
-                                Tổng đài Asterisk hỗ trợ hầu như tất cả các giao thức VOIP có trên thị trường từ SIP,
-                                H323, MGCP (của Cisco) Unistim của Nortel… thậm chí cả WebRTC (hiện nay TAS đã xây dựng
-                                thành công
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="introduction-card card gap-15px justify-content-center text-center border-0 position-relative overflow-hidden">
-                        <div class="card-icon rounded-circle hstack justify-content-center">
-                            <img src="./assets/images/icon/fire-extinguisher.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="card-title">
-                                Thiết kế phòng cháy
-                            </div>
-                            <div class="card-text">
-                                Tổng đài Asterisk hỗ trợ hầu như tất cả các giao thức VOIP có trên thị trường từ SIP,
-                                H323, MGCP (của Cisco) Unistim của Nortel… thậm chí cả WebRTC (hiện nay TAS đã xây dựng
-                                thành công
+            <div class="position-relative slider-theme" id="slider-introduction">
+                <div class="swiper h-auto">
+                    <div class="swiper-wrapper h-auto">
+                        <div class="swiper-slide h-auto">
+                            <div class="introduction-card card gap-15px justify-content-center text-center border-0 position-relative overflow-hidden">
+                                <div class="card-icon rounded-circle hstack justify-content-center">
+                                    <img src="./assets/images/icon/fire-extinguisher.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="card-title">
+                                        Thiết kế phòng cháy
+                                    </div>
+                                    <div class="card-text">
+                                        Tổng đài Asterisk hỗ trợ hầu như tất cả các giao thức VOIP có trên thị
+                                        trường từ
+                                        SIP,
+                                        H323, MGCP (của Cisco) Unistim của Nortel… thậm chí cả WebRTC (hiện nay TAS
+                                        đã
+                                        xây dựng
+                                        thành công
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="introduction-card card gap-15px justify-content-center text-center border-0 position-relative overflow-hidden">
-                        <div class="card-icon rounded-circle hstack justify-content-center">
-                            <img src="./assets/images/icon/fire-extinguisher.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="card-title">
-                                Thiết kế phòng cháy
+                        <div class="swiper-slide h-auto">
+                            <div class="introduction-card card gap-15px justify-content-center text-center border-0 position-relative overflow-hidden">
+                                <div class="card-icon rounded-circle hstack justify-content-center">
+                                    <img src="./assets/images/icon/fire-extinguisher.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="card-title">
+                                        Thiết kế phòng cháy
+                                    </div>
+                                    <div class="card-text">
+                                        Tổng đài Asterisk hỗ trợ hầu như tất cả các giao thức VOIP có trên thị
+                                        trường từ
+                                        SIP,
+                                        H323, MGCP (của Cisco) Unistim của Nortel… thậm chí cả WebRTC (hiện nay TAS
+                                        đã
+                                        xây dựng
+                                        thành công
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card-text">
-                                Tổng đài Asterisk hỗ trợ hầu như tất cả các giao thức VOIP có trên thị trường từ SIP,
-                                H323, MGCP (của Cisco) Unistim của Nortel… thậm chí cả WebRTC (hiện nay TAS đã xây dựng
-                                thành công
+                        </div>
+                        <div class="swiper-slide h-auto">
+                            <div class="introduction-card card gap-15px justify-content-center text-center border-0 position-relative overflow-hidden">
+                                <div class="card-icon rounded-circle hstack justify-content-center">
+                                    <img src="./assets/images/icon/fire-extinguisher.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="card-title">
+                                        Thiết kế phòng cháy
+                                    </div>
+                                    <div class="card-text">
+                                        Tổng đài Asterisk hỗ trợ hầu như tất cả các giao thức VOIP có trên thị
+                                        trường từ
+                                        SIP,
+                                        H323, MGCP (của Cisco) Unistim của Nortel… thậm chí cả WebRTC (hiện nay TAS
+                                        đã
+                                        xây dựng
+                                        thành công
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="introduction-card card gap-15px justify-content-center text-center border-0 position-relative overflow-hidden">
-                        <div class="card-icon rounded-circle hstack justify-content-center">
-                            <img src="./assets/images/icon/fire-extinguisher.png" class="img-fluid" alt="">
-                        </div>
-                        <div class="card-body p-0">
-                            <div class="card-title">
-                                Thiết kế phòng cháy
-                            </div>
-                            <div class="card-text">
-                                Tổng đài Asterisk hỗ trợ hầu như tất cả các giao thức VOIP có trên thị trường từ SIP,
-                                H323, MGCP (của Cisco) Unistim của Nortel… thậm chí cả WebRTC (hiện nay TAS đã xây dựng
-                                thành công
+                        <div class="swiper-slide h-auto">
+                            <div class="introduction-card card gap-15px justify-content-center text-center border-0 position-relative overflow-hidden">
+                                <div class="card-icon rounded-circle hstack justify-content-center">
+                                    <img src="./assets/images/icon/fire-extinguisher.png" class="img-fluid" alt="">
+                                </div>
+                                <div class="card-body p-0">
+                                    <div class="card-title">
+                                        Thiết kế phòng cháy
+                                    </div>
+                                    <div class="card-text">
+                                        Tổng đài Asterisk hỗ trợ hầu như tất cả các giao thức VOIP có trên thị
+                                        trường từ
+                                        SIP,
+                                        H323, MGCP (của Cisco) Unistim của Nortel… thậm chí cả WebRTC (hiện nay TAS
+                                        đã
+                                        xây dựng
+                                        thành công
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -441,6 +945,11 @@
                                                     7.500.000₫
                                                 </div>
                                             </div>
+                                            <div class="card-button">
+                                                <button class="button-theme button-theme_primary w-100 buttonCart">
+                                                    <i class="fas fa-shopping-bag lh-base me-1"></i>Thêm giỏ hàng
+                                                </button>
+                                            </div>
                                         </div>
                                         <a href="" class="stretched-link"></a>
                                     </div>
@@ -463,13 +972,19 @@
                                         </div>
                                         <div class="card-body vstack gap-15px">
                                             <div class="card-title mb-0 limit transition-default">
-                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt Nam
+                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt
+                                                Nam
                                             </div>
                                             <div class="card-price mt-auto hstack gap-10px">
                                                 <div class="price-current fw-bold">6.950.000₫</div>
                                                 <div class="price-old align-self-end text-decoration-line-through">
                                                     7.500.000₫
                                                 </div>
+                                            </div>
+                                            <div class="card-button">
+                                                <button class="button-theme button-theme_primary w-100 buttonCart">
+                                                    <i class="fas fa-shopping-bag lh-base me-1"></i>Thêm giỏ hàng
+                                                </button>
                                             </div>
                                         </div>
                                         <a href="" class="stretched-link"></a>
@@ -501,6 +1016,11 @@
                                                     7.500.000₫
                                                 </div>
                                             </div>
+                                            <div class="card-button">
+                                                <button class="button-theme button-theme_primary w-100 buttonCart">
+                                                    <i class="fas fa-shopping-bag lh-base me-1"></i>Thêm giỏ hàng
+                                                </button>
+                                            </div>
                                         </div>
                                         <a href="" class="stretched-link"></a>
                                     </div>
@@ -523,13 +1043,19 @@
                                         </div>
                                         <div class="card-body vstack gap-15px">
                                             <div class="card-title mb-0 limit transition-default">
-                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt Nam
+                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt
+                                                Nam
                                             </div>
                                             <div class="card-price mt-auto hstack gap-10px">
                                                 <div class="price-current fw-bold">6.950.000₫</div>
                                                 <div class="price-old align-self-end text-decoration-line-through">
                                                     7.500.000₫
                                                 </div>
+                                            </div>
+                                            <div class="card-button">
+                                                <button class="button-theme button-theme_primary w-100 buttonCart">
+                                                    <i class="fas fa-shopping-bag lh-base me-1"></i>Thêm giỏ hàng
+                                                </button>
                                             </div>
                                         </div>
                                         <a href="" class="stretched-link"></a>
@@ -561,6 +1087,11 @@
                                                     7.500.000₫
                                                 </div>
                                             </div>
+                                            <div class="card-button">
+                                                <button class="button-theme button-theme_primary w-100 buttonCart">
+                                                    <i class="fas fa-shopping-bag lh-base me-1"></i>Thêm giỏ hàng
+                                                </button>
+                                            </div>
                                         </div>
                                         <a href="" class="stretched-link"></a>
                                     </div>
@@ -583,13 +1114,19 @@
                                         </div>
                                         <div class="card-body vstack gap-15px">
                                             <div class="card-title mb-0 limit transition-default">
-                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt Nam
+                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt
+                                                Nam
                                             </div>
                                             <div class="card-price mt-auto hstack gap-10px">
                                                 <div class="price-current fw-bold">6.950.000₫</div>
                                                 <div class="price-old align-self-end text-decoration-line-through">
                                                     7.500.000₫
                                                 </div>
+                                            </div>
+                                            <div class="card-button">
+                                                <button class="button-theme button-theme_primary w-100 buttonCart">
+                                                    <i class="fas fa-shopping-bag lh-base me-1"></i>Thêm giỏ hàng
+                                                </button>
                                             </div>
                                         </div>
                                         <a href="" class="stretched-link"></a>
@@ -621,6 +1158,11 @@
                                                     7.500.000₫
                                                 </div>
                                             </div>
+                                            <div class="card-button">
+                                                <button class="button-theme button-theme_primary w-100 buttonCart">
+                                                    <i class="fas fa-shopping-bag lh-base me-1"></i>Thêm giỏ hàng
+                                                </button>
+                                            </div>
                                         </div>
                                         <a href="" class="stretched-link"></a>
                                     </div>
@@ -643,13 +1185,19 @@
                                         </div>
                                         <div class="card-body vstack gap-15px">
                                             <div class="card-title mb-0 limit transition-default">
-                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt Nam
+                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt
+                                                Nam
                                             </div>
                                             <div class="card-price mt-auto hstack gap-10px">
                                                 <div class="price-current fw-bold">6.950.000₫</div>
                                                 <div class="price-old align-self-end text-decoration-line-through">
                                                     7.500.000₫
                                                 </div>
+                                            </div>
+                                            <div class="card-button">
+                                                <button class="button-theme button-theme_primary w-100 buttonCart">
+                                                    <i class="fas fa-shopping-bag lh-base me-1"></i>Thêm giỏ hàng
+                                                </button>
                                             </div>
                                         </div>
                                         <a href="" class="stretched-link"></a>
@@ -687,7 +1235,8 @@
                                         </div>
                                         <div class="card-body vstack gap-15px">
                                             <div class="card-title mb-0 limit transition-default">
-                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt Nam
+                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt
+                                                Nam
                                             </div>
                                             <div class="card-price mt-auto hstack gap-10px">
                                                 <div class="price-current fw-bold">6.950.000₫</div>
@@ -747,7 +1296,8 @@
                                         </div>
                                         <div class="card-body vstack gap-15px">
                                             <div class="card-title mb-0 limit transition-default">
-                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt Nam
+                                                Đầu báo khói quang CM WT-32L Chungmei giá rẻ nhất thị trường Việt
+                                                Nam
                                             </div>
                                             <div class="card-price mt-auto hstack gap-10px">
                                                 <div class="price-current fw-bold">6.950.000₫</div>
@@ -796,6 +1346,101 @@
                         </div>
                         <div class="slider-button_next">
                             <i class="fal fa-angle-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section-gap section-why">
+        <div class="container">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-6">
+                    <div class="section-heading text-lg-start">
+                        <div class="heading-sub me-lg-auto">
+                            <div class="heading-sub_icon">
+                                <i class="fas fa-fire"></i>
+                            </div>
+                            <div class="heading-sub_text">
+                                TẠI SAO CHỌN DỊCH VỤ PCCC TẠI HẢI MINH
+                            </div>
+                        </div>
+                        <div class="heading-title">
+                            Hải Minh chuyên nghiệp và vượt trội
+                        </div>
+                        <div class="heading-text">
+                            Hải Minh Group tự tin là một trong các công ty hàng đầu
+                            trong lĩnh vực phát triển phầm mềm và xuất khẩu phần mềm,
+                            có năng lực cạnh tranh trên khu vực và thị trường quốc tế.
+                        </div>
+                    </div>
+                    <img src="./assets/images/icon/img-demo-1.png" class="w-100 img-fluid" alt="">
+                </div>
+                <div class="col-lg-3">
+                    <div class="row g-4">
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="why-card card border-0 h-100">
+                                <div class="card-icon">
+                                    <i class="fal fa-paperclip"></i>
+                                </div>
+                                <div class="card-text">
+                                    <strong>Con người thực chiến, +300 chuyên gia lập trình</strong>, tư vấn chiến
+                                    lược,
+                                    nội dung và vận hành cao cấp
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="why-card card border-0 h-100">
+                                <div class="card-icon">
+                                    <i class="fal fa-share-alt"></i>
+                                </div>
+                                <div class="card-text">
+                                    <strong>Hệ sinh thái đa kết nối, đồng bộ dữ liệu trong bộ giải pháp 5.0</strong>,
+                                    sẵn sàng tích hợp
+                                    các công cụ chuyên biệt của bên thứ 3 để phục vụ theo đặc thù doanh nghiệp
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="why-card card border-0 h-100">
+                                <div class="card-icon">
+                                    <i class="fal fa-shield-check"></i>
+                                </div>
+                                <div class="card-text">
+                                    <strong>Công nghệ bảo mật dữ liệu hàng đầu từ Hải Minh Group</strong> – Top 4
+                                    nhà
+                                    cung cấp hạ tầng đám mây Việt Nam
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="why-card card border-0 h-100">
+                                <div class="card-icon">
+                                    <i class="fal fa-chalkboard-teacher"></i>
+                                </div>
+                                <div class="card-text">
+                                    <strong>Năng lực công nghệ cao dựa trên nền tảng công nghệ tích lũy 16 năm của
+                                        Hải
+                                        Minh Group</strong>,
+                                    – đơn vị tiên phong trong lĩnh vực công nghệ, truyền thông tại Việt Nam
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-sm-6 col-lg-12">
+                            <div class="why-card card border-0 h-100">
+                                <div class="card-icon">
+                                    <i class="fal fa-cogs"></i>
+                                </div>
+                                <div class="card-text">
+                                    <strong>Phần mềm thân thiện, vận hành tinh gọn</strong>,
+                                    mọi nhân sự đều dễ dàng sử dụng, hỗ trợ đa ngôn ngữ
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1006,98 +1651,7 @@
             </div>
         </div>
     </div>
-    <div class="section-gap section-why">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-6">
-                    <div class="section-heading text-lg-start">
-                        <div class="heading-sub me-lg-auto">
-                            <div class="heading-sub_icon">
-                                <i class="fas fa-fire"></i>
-                            </div>
-                            <div class="heading-sub_text">
-                                TẠI SAO CHỌN DỊCH UUJ PCCC TẠI HẢI MINH
-                            </div>
-                        </div>
-                        <div class="heading-title">
-                            Hải Minh chuyên nghiệp và vượt trội
-                        </div>
-                        <div class="heading-text">
-                            Hải Minh Group tự tin là một trong các công ty hàng đầu
-                            trong lĩnh vực phát triển phầm mềm và xuất khẩu phần mềm,
-                            có năng lực cạnh tranh trên khu vực và thị trường quốc tế.
-                        </div>
-                    </div>
-                    <img src="./assets/images/icon/img-demo-1.png" class="w-100 img-fluid" alt="">
-                </div>
-                <div class="col-lg-3">
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="why-card card border-0">
-                                <div class="card-icon">
-                                    <i class="fal fa-paperclip"></i>
-                                </div>
-                                <div class="card-text">
-                                    <strong>Con người thực chiến, +300 chuyên gia lập trình</strong>, tư vấn chiến lược,
-                                    nội dung và vận hành cao cấp
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="why-card card border-0">
-                                <div class="card-icon">
-                                    <i class="fal fa-share-alt"></i>
-                                </div>
-                                <div class="card-text">
-                                    <strong>Hệ sinh thái đa kết nối, đồng bộ dữ liệu trong bộ giải pháp 5.0</strong>,
-                                    sẵn sàng tích hợp
-                                    các công cụ chuyên biệt của bên thứ 3 để phục vụ theo đặc thù doanh nghiệp
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="row g-4">
-                        <div class="col-12">
-                            <div class="why-card card border-0">
-                                <div class="card-icon">
-                                    <i class="fal fa-shield-check"></i>
-                                </div>
-                                <div class="card-text">
-                                    <strong>Công nghệ bảo mật dữ liệu hàng đầu từ Hải Minh Group</strong> – Top 4 nhà
-                                    cung cấp hạ tầng đám mây Việt Nam
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="why-card card border-0">
-                                <div class="card-icon">
-                                    <i class="fal fa-chalkboard-teacher"></i>
-                                </div>
-                                <div class="card-text">
-                                    <strong>Năng lực công nghệ cao dựa trên nền tảng công nghệ tích lũy 16 năm của Hải
-                                        Minh Group</strong>,
-                                    – đơn vị tiên phong trong lĩnh vực công nghệ, truyền thông tại Việt Nam
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12">
-                            <div class="why-card card border-0">
-                                <div class="card-icon">
-                                    <i class="fal fa-cogs"></i>
-                                </div>
-                                <div class="card-text">
-                                    <strong>Phần mềm thân thiện, vận hành tinh gọn</strong>,
-                                    mọi nhân sự đều dễ dàng sử dụng, hỗ trợ đa ngôn ngữ
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
     <div class="section-gap section-articles">
         <div class="container">
             <div class="section-heading">
@@ -1138,7 +1692,8 @@
                                 </div>
                             </div>
                             <div class="card-text limit">
-                                Auto Call hiện đang được rất nhiều doanh nghiệp xem như “trợ thủ” khi ứng dụng này có
+                                Auto Call hiện đang được rất nhiều doanh nghiệp xem như “trợ thủ” khi ứng dụng này
+                                có
                                 thể giúp giải quyết “bài toán”. Auto Call hiện đang được rất nhiều doanh nghiệp xem
                                 như “trợ thủ” khi ứng dụng này có thể giúp giải quyết “bài toán”...
                             </div>
@@ -1177,7 +1732,8 @@
                                 </div>
                             </div>
                             <div class="card-text limit">
-                                Auto Call hiện đang được rất nhiều doanh nghiệp xem như “trợ thủ” khi ứng dụng này có
+                                Auto Call hiện đang được rất nhiều doanh nghiệp xem như “trợ thủ” khi ứng dụng này
+                                có
                                 thể giúp giải quyết “bài toán”. Auto Call hiện đang được rất nhiều doanh nghiệp xem
                                 như “trợ thủ” khi ứng dụng này có thể giúp giải quyết “bài toán”...
                             </div>
@@ -1216,7 +1772,8 @@
                                 </div>
                             </div>
                             <div class="card-text limit">
-                                Auto Call hiện đang được rất nhiều doanh nghiệp xem như “trợ thủ” khi ứng dụng này có
+                                Auto Call hiện đang được rất nhiều doanh nghiệp xem như “trợ thủ” khi ứng dụng này
+                                có
                                 thể giúp giải quyết “bài toán”. Auto Call hiện đang được rất nhiều doanh nghiệp xem
                                 như “trợ thủ” khi ứng dụng này có thể giúp giải quyết “bài toán”...
                             </div>
@@ -1264,7 +1821,7 @@
     <div class="footer-information">
         <div class="container">
             <div class="row g-4">
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 order-1">
                     <div class="footer-item">
                         <div class="vstack gap-15px">
                             <div class="footer-logo">
@@ -1283,7 +1840,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-2">
+                <div class="col-md-6 col-lg-2 col-6 order-3 order-lg-4">
                     <div class="footer-item">
                         <div class="vstack gap-25px">
                             <div class="footer-title">
@@ -1312,7 +1869,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-2">
+                <div class="col-md-6 col-lg-2 col-6 order-3 order-lg-3">
                     <div class="footer-item">
                         <div class="footer-item">
                             <div class="vstack gap-25px">
@@ -1343,7 +1900,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-4 order-1 order-md-2 order-lg-4">
                     <div class="footer-item">
                         <div class="footer-item">
                             <div class="vstack gap-25px">
@@ -1390,6 +1947,68 @@
         </div>
     </div>
 </footer>
+
+<div class="floating-cart" id="floatingCart">
+    <div class="cart-card card border-0 rounded-0 bg-white position-fixed top-0 end-0 mw-100 h-100 overflow-hidden">
+        <div class="card-header rounded-0 bg-white hstack justify-content-between">
+            <div class="card-title fw-bold mb-0">
+                GIỎ HÀNG
+            </div>
+            <button class="link-default" id="closeCart">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <div class="card-body p-0 flex-fill vstack h-100">
+            <div class="card-list position-relative flex-fill">
+                <div class="card-scroll position-absolute top-0 start-0 bottom-0 end-0 mh-100">
+                    <div id="cardList"
+                         class="card-list position-absolute top-0 start-0 bottom-0 end-0 mh-100"></div>
+                    <div class="card-empty text-center">
+                        <div class="card-icon">
+                            <img src="./assets/images/icon/empty-cart.avif" class="img-fluid" alt="">
+                        </div>
+                        <div class="card-title">
+                            Giỏ hàng của bạn đang trống
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card-information">
+                <div class="card-total hstack justify-content-between">
+                    <div class="card-text">
+                        Tạm tính:
+                    </div>
+                    <div class="card-value">1.050.000đ</div>
+                </div>
+                <div class="card-button">
+                    <a href="" class="button-theme button-theme_primary w-100">
+                        Thanh toán <i class="fal fa-angle-right lh-base ms-2 fz-20"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="floating-overlay" id="floatingOverlay"></div>
+</div>
+
+<div class="floating-social">
+    <div class="social-item">
+        <i class="fab fa-facebook-messenger"></i>
+        <a href="" class="stretched-link"></a>
+    </div>
+    <div class="social-item">
+        <i class="fab fa-facebook-messenger"></i>
+        <a href="" class="stretched-link"></a>
+    </div>
+    <div class="social-item">
+        <i class="fas fa-phone-alt"></i>
+        <a href="" class="stretched-link"></a>
+    </div>
+</div>
 
 <script type=" text/javascript" src="./assets/plugins/jquery.min.js"></script>
 <script type="text/javascript"
