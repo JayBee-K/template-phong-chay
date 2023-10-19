@@ -1681,7 +1681,7 @@
 	color: var(--bs-white);
 }
 
-.section-pagination .pagination .page-item:first-child .page-link{
+.section-pagination .pagination .page-item:first-child .page-link {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 	padding-right: 5px;
@@ -1769,6 +1769,10 @@
 
 .dropdown-filter .dropdown .link-default[aria-expanded=true] + .dropdown-menu {
 	border-radius: 4px 0 4px 4px;
+}
+
+.sidebar-filter .sidebar-filter_body {
+
 }
 
 @media screen and (min-width: 992px) {
