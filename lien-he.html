@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+	      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+	<title>Template Phòng Cháy</title>
+	<meta name="description" content="Template Phòng Cháy">
+	<meta name="author" content="">
+
+	<meta property="og:title" content="Template Phòng Cháy">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:description" content="Template Phòng Cháy">
+	<meta property="og:image" content="">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+	      rel="stylesheet">
+
+	<link rel="icon" href="./assets/images/favicon.png">
+	<link rel="apple-touch-icon" href="./assets/images/favicon.png">
+	<link rel="stylesheet" href="./assets/plugins/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./assets/plugins/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.min.css">
+	<link rel="stylesheet" href="./assets/fonts/fontawesome/css/all.min.css">
+	<link rel="stylesheet" href="./assets/css/base.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
+
+	<style>
+		:root {
+			--primary-color: #e85000;
+			--primary-hover: #ee6b20;
+			--primary-rgb: 232, 80, 0;
+			--secondary-color: #ff0000;
+			--secondary-hover: #f10909;
+			--secondary-rgb: 255, 0, 0;
+			--gradient: linear-gradient(138.62deg, #BC0D2C 7.45%, #E65F1E 85.72%);
+		}
+	</style>
+</head>
+<body>
+
+<div id="header" class="header">
+	<div class="header-top">
+		<div class="container">
+			<div class="row align-items-center justify-content-lg-between">
+				<div class="col-lg-auto">
+					<div class="header-text text-white">
+						Công ty TNHH PCCC Hải Minh
+					</div>
+				</div>
+				<div class="col-lg-auto d-none d-lg-block">
+					<div class="header-actions hstack gap-20px">
+						<div class="header-actions_item hstack gap-5px position-relative">
+							<a href="" class="hstack gap-8px position-relative">
+								<i class="fas fa-user"></i>
+								Tài khoản
+							</a>
+							<i class="fal fa-angle-down"></i>
+							<ul class="list-unstyled mb-0 position-absolute">
+								<li>
+									<a href="" class="user-item hstack align-items-center">
+										Đăng nhập tài khoản
+									</a>
+								</li>
+								<li>
+									<a href="" class="user-item hstack align-items-center">
+										Thông tin tài khoản
+									</a>
+								</li>
+								<li>
+									<a href="" class="user-item hstack align-items-center">
+										Đơn hàng của bạn
+									</a>
+								</li>
+								<li>
+									<a href="" class="user-item hstack align-items-center">
+										Đăng xuất
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header-actions_item hstack gap-5px">
+							<a href="" class="hstack gap-8px position-relative">
+								<i class="fas fa-fire-extinguisher"></i>
+								Sản phẩm
+							</a>
+						</div>
+						<div class="header-actions_item hstack gap-5px">
+							<a href="" class="hstack gap-8px position-relative">
+								<i class="fas fa-map-marker-alt"></i>
+								Hệ thống cửa hàng
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-middle">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-3">
+					<div class="header-group hstack">
+						<div class="header-hamburger d-flex d-lg-none">
+							<button type="button" class="hamburger-button" id="hamburger-button">
+								<span></span>
+								<span></span>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="header-logo">
+							<a href="" class="d-inline-flex align-middle">
+								<img src="./assets/images/logo.png" class="mw-100" alt="">
+							</a>
+						</div>
+						<div class="header-user ms-auto d-flex d-lg-none">
+							<button type="button" class="link-default hstack gap-8px position-relative">
+								<i class="far fa-user"></i>
+							</button>
+							<ul class="list-unstyled mb-0 position-absolute">
+								<li>
+									<a href="" class="user-item hstack align-items-center">
+										Đăng nhập tài khoản
+									</a>
+								</li>
+								<li>
+									<a href="" class="user-item hstack align-items-center">
+										Thông tin tài khoản
+									</a>
+								</li>
+								<li>
+									<a href="" class="user-item hstack align-items-center">
+										Đơn hàng của bạn
+									</a>
+								</li>
+								<li>
+									<a href="" class="user-item hstack align-items-center">
+										Đăng xuất
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="header-cart d-flex d-lg-none">
+							<button type="button" class="link-default" id="callCartMobile">
+								<i class="far fa-shopping-bag"></i>(5)
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-5 d-none d-lg-block">
+					<form action="">
+						<div class="header-form hstack position-relative overflow-hidden">
+							<input type="text" placeholder="Nhập tên sản phẩm bạn muốn tìm..." class="form-control">
+							<button type="submit" class="link-default position-absolute top-50 translate-middle-y"><i
+									class="fal fa-search"></i></button>
+						</div>
+					</form>
+				</div>
+				<div class="col-lg-4 d-none d-lg-block">
+					<div class="header-contact hstack gap-30px">
+						<div class="header-contact_item hstack gap-8px position-relative overflow-hidden">
+							<div class="contact-item_icon">
+								<i class="fas fa-phone-alt"></i>
+							</div>
+							<div class="contact-item_content">
+								<div class="contact-item_title">
+									Gọi đặt hàng
+								</div>
+								<div class="contact-item_value">
+									0919.882.114
+								</div>
+							</div>
+							<a href="" class="stretched-link"></a>
+						</div>
+						<div class="header-contact_item hstack gap-8px position-relative overflow-hidden">
+							<div class="contact-item_icon">
+								<i class="fas fa-user-headset"></i>
+							</div>
+							<div class="contact-item_content">
+								<div class="contact-item_title">
+									Gọi tư vấn
+								</div>
+								<div class="contact-item_value">
+									0919.882.114
+								</div>
+							</div>
+							<a href="" class="stretched-link"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-bottom">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-3 d-none d-xl-block">
+					<div class="header-category" id="header-category">
+						<button class="link-default" id="callCategory">
+							<i class="fal fa-bars me-2"></i>Danh mục sản phẩm
+						</button>
+						<div class="category-list">
+							<ul>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Báo cháy GST
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Báo cháy Chungmei
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Báo cháy HORING LIH
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Báo cháy YUN-YANG
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Ống nối mềm đầu phun
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>Bình chữa cháy
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Đèn Exit và Đèn sự cố
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Đầu phun SPRINGKLER
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Vòi, Van, Trụ chữa cháy
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Hộp chữa cháy
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Đầu phun SPRINGKLER
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Vòi, Van, Trụ chữa cháy
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Hộp chữa cháy
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Hộp chữa cháy
+									</a>
+								</li>
+								<li>
+									<a href="">
+										<i class="fal fa-angle-right"></i>
+										Hộp chữa cháy
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-10 col-xl-7">
+					<div class="header-navigation" id="header-navigation">
+						<ul>
+							<li class="navigation-logo d-flex d-lg-none">
+								<a href="/"
+								   class="d-inline-flex align-items-center justify-content-center align-middle">
+									<img src="./assets/images/logo.png" class="img-fluid">
+								</a>
+							</li>
+							<li class="navigation-search d-flex d-lg-none">
+								<form action="">
+									<div class="header-form hstack position-relative overflow-hidden">
+										<input type="text" placeholder="Nhập tên sản phẩm bạn muốn tìm..."
+										       class="form-control">
+										<button type="submit"
+										        class="link-default position-absolute top-50 translate-middle-y"><i
+												class="fal fa-search"></i></button>
+									</div>
+								</form>
+							</li>
+							<li>
+								<a href=""
+								   aria-label="">
+									Trang chủ
+								</a>
+							</li>
+							<li>
+								<a href=""
+								   aria-label="">
+									Giới thiệu
+								</a>
+							</li>
+							<li>
+								<a href=""
+								   aria-label="">
+									Sản phẩm
+								</a>
+							</li>
+							<li>
+								<a href=""
+								   aria-label="">
+									Chính sách đại lý
+								</a>
+							</li>
+							<li>
+								<a href=""
+								   aria-label="">
+									Tuyển dụng
+								</a>
+							</li>
+							<li>
+								<a href=""
+								   aria-label="">
+									Tin tức
+									<i class="fal fa-angle-down"></i>
+								</a>
+								<ul>
+									<li>
+										<a href="">
+											Danh sách tin tức 1
+										</a>
+									</li>
+									<li>
+										<a href="">
+											Danh sách tin tức 2
+										</a>
+									</li>
+									<li>
+										<a href="">
+											Danh sách tin tức 3
+										</a>
+									</li>
+									<li>
+										<a href="">
+											Danh sách tin tức 4
+										</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href=""
+								   aria-label="">
+									Liên hệ
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-lg-2 d-none d-lg-block">
+					<div class="header-cart">
+						<button type="button" class="link-default" id="callCart">
+							<i class="fas fa-shopping-bag lh-base me-2"></i>
+							Giỏ hàng (5)
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="header-overlay" id="header-overlay"></div>
+</div>
+
+<div id="main" class="main">
+	<div class="section-gap">
+		<div class="container">
+			<div class="section-breadcrumb">
+				<ol class="breadcrumb">
+					<li class="breadcrumb-item">
+						<a href="#">Trang chủ</a>
+					</li>
+					<li class="breadcrumb-item active">
+						Liên hệ
+					</li>
+				</ol>
+			</div>
+			<div class="row g-4">
+				<div class="col-lg-6">
+					<div class="contact-list vstack gap-20px">
+						<div class="contact-item">
+							<div class="contact-heading">
+								<div class="contact-heading_title">
+									Công ty TNHH PCCC Hải Minh
+								</div>
+							</div>
+							<div class="contact-info">
+								<div class="row g-4">
+									<div class="col-lg-6">
+										<div class="contact-info_item hstack gap-10px">
+											<div class="contact-info_icon rounded-circle flex-shrink-0 hstack align-self-center justify-content-center">
+												<i class="fas fa-map-marker-alt"></i>
+											</div>
+											<div class="contact-info_content">
+												<div class="contact-info_title">
+													Địa chỉ
+												</div>
+												<div class="contact-info_text">
+													70 Lữ Gia, Phường 15, Quận 11, TP.HCM
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="contact-info_item hstack gap-10px">
+											<div class="contact-info_icon rounded-circle flex-shrink-0 hstack align-self-center justify-content-center">
+												<i class="fas fa-clock"></i>
+											</div>
+											<div class="contact-info_content">
+												<div class="contact-info_title">
+													Thời gian làm việc
+												</div>
+												<div class="contact-info_text">
+													8h - 22h <br>Từ thứ 2 đến chủ nhật
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="contact-info_item hstack gap-10px">
+											<div class="contact-info_icon rounded-circle flex-shrink-0 hstack align-self-center justify-content-center">
+												<i class="fas fa-phone-alt"></i>
+											</div>
+											<div class="contact-info_content">
+												<div class="contact-info_title">
+													Hotline
+												</div>
+												<div class="contact-info_text">
+													<a href="tel:19006750">1900 6750</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="col-lg-6">
+										<div class="contact-info_item hstack gap-10px">
+											<div class="contact-info_icon rounded-circle flex-shrink-0 hstack align-self-center justify-content-center">
+												<i class="fas fa-envelope"></i>
+											</div>
+											<div class="contact-info_content">
+												<div class="contact-info_title">
+													Email
+												</div>
+												<div class="contact-info_text">
+													<a href="mailto:support@nencer.com">support@nencer.com</a>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="contact-item">
+							<div class="contact-heading">
+								<div class="contact-heading_title">
+									Liên hệ với chúng tôi
+								</div>
+								<div class="contact-heading_description">
+									Nếu bạn có thắc mắc gì, có thể gửi yêu cầu cho chúng tôi, và chúng tôi sẽ liên lạc
+									lại với bạn sớm nhất có thể .
+								</div>
+							</div>
+							<div class="contact-form">
+								<div class="mb-3">
+									<label for="" class="d-block">
+										<input type="text" class="form-control" placeholder="Họ và tên">
+									</label>
+								</div>
+								<div class="mb-3">
+									<label for="" class="d-block">
+										<input type="email" class="form-control" placeholder="Email của bạn">
+									</label>
+								</div>
+								<div class="mb-3">
+									<label for="" class="d-block">
+										<input type="tel" class="form-control" placeholder="Số điện thoại (*)" required
+										       minlength="10" maxlength="11">
+									</label>
+								</div>
+								<div class="mb-3">
+									<label for="" class="d-block">
+										<textarea name="" id="" class="form-control" placeholder="Nội dung của bạn"
+										          rows="4"></textarea>
+									</label>
+								</div>
+								<button type="submit"
+								        class="button-theme button-theme_large button-theme_primary shadow-none rounded-1"
+								        aria-label="Gửi liên hệ">
+									Gửi liên hệ
+								</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="contact-map h-100">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.708141605365!2d105.77185157588802!3d21.044360887241304!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab3bb828151b%3A0x4708db15eac0e0a0!2sNencer%20Software!5e0!3m2!1svi!2s!4v1697106079971!5m2!1svi!2s"
+						        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+						        referrerpolicy="no-referrer-when-downgrade"></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<footer id="footer" class="footer" style="background-image: url('./assets/images/icon/bg-footer.jpg')">
+	<div class="footer-subscribe">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+					<div class="subscribe-inner">
+						<div class="section-heading">
+							<div class="heading-title heading-title_black text-white">
+								ĐĂNG KÝ NHẬN KHUYẾN MÃI
+							</div>
+							<div class="heading-text text-white">
+								Đăng ký email để nhận thông tin khuyến mãi ưu đãi bất ngờ
+							</div>
+						</div>
+						<form action="">
+							<div class="subscribe-form">
+								<input type="text" class="form-control" placeholder="Nhập địa chỉ email">
+								<button class="button-theme button-theme_primary">ĐĂNG KÝ</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-information">
+		<div class="container">
+			<div class="row g-4">
+				<div class="col-md-6 col-lg-4 order-1">
+					<div class="footer-item">
+						<div class="vstack gap-15px">
+							<div class="footer-logo">
+								<a href="" class="d-inline-flex align-middle">
+									<img src="./assets/images/logo-white.webp" class="img-fluid" alt="">
+								</a>
+							</div>
+							<div class="footer-text">
+								Chúng tôi rất hân hạnh được làm việc với hàng trăm doanh nghiệp tuyệt vời có tư duy
+								tương
+								lai bao gồm nhiều phần cứng hàng đầu thế giới.
+							</div>
+							<div class="footer-images">
+								<img src="./assets/images/payment.svg" class="img-fluid" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-2 col-6 order-3 order-lg-4">
+					<div class="footer-item">
+						<div class="vstack gap-25px">
+							<div class="footer-title">
+								THÔNG TIN
+							</div>
+							<div class="footer-list vstack gap-15px">
+								<a href="" class="footer-text">
+									Trang chủ
+								</a>
+								<a href="" class="footer-text">
+									Sản phẩm
+								</a>
+								<a href="" class="footer-text">
+									Tư vấn
+								</a>
+								<a href="" class="footer-text">
+									Giới thiệu
+								</a>
+								<a href="" class="footer-text">
+									Tin tức
+								</a>
+								<a href="" class="footer-text">
+									Liên hệ
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-2 col-6 order-3 order-lg-3">
+					<div class="footer-item">
+						<div class="footer-item">
+							<div class="vstack gap-25px">
+								<div class="footer-title">
+									CHÍNH SÁCH
+								</div>
+								<div class="footer-list vstack gap-15px">
+									<a href="" class="footer-text">
+										Trang chủ
+									</a>
+									<a href="" class="footer-text">
+										Sản phẩm
+									</a>
+									<a href="" class="footer-text">
+										Tư vấn
+									</a>
+									<a href="" class="footer-text">
+										Giới thiệu
+									</a>
+									<a href="" class="footer-text">
+										Tin tức
+									</a>
+									<a href="" class="footer-text">
+										Liên hệ
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-4 order-1 order-md-2 order-lg-4">
+					<div class="footer-item">
+						<div class="footer-item">
+							<div class="vstack gap-25px">
+								<div class="footer-title">
+									LIÊN HỆ
+								</div>
+								<div class="footer-list vstack gap-15px">
+									<a href="" class="footer-text hstack gap-10px align-items-start">
+										<i class="fas fa-phone-alt"></i>
+										1900 6750
+									</a>
+									<a href="" class="footer-text hstack gap-10px align-items-start">
+										<i class="fas fa-envelope"></i>
+										Email: hellocafein@gmail.com
+									</a>
+									<a href="" class="footer-text hstack gap-10px align-items-start">
+										<i class="fas fa-clock"></i>
+										Mở cửa: Từ 8h00 - 20h00 hàng tuần
+									</a>
+									<a href="" class="footer-text hstack gap-10px align-items-start">
+										<i class="fas fa-map-marker-alt"></i>
+										Địa chỉ: Tâng 6 toà nhà Ladeco, 266 Đội Cấn, phường Liễu Giai, Hà Nội,
+									</a>
+								</div>
+								<div class="footer-social hstack gap-25px">
+									<a href="" class="footer-text">
+										<i class="fab fa-facebook-f"></i>
+									</a>
+									<a href="" class="footer-text">
+										<i class="fab fa-twitter"></i>
+									</a>
+									<a href="" class="footer-text">
+										<i class="fab fa-pinterest-p"></i>
+									</a>
+									<a href="" class="footer-text">
+										<i class="fab fa-instagram"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+
+<div class="floating-cart" id="floatingCart">
+	<div class="cart-card card border-0 rounded-0 bg-white position-fixed top-0 end-0 mw-100 h-100 overflow-hidden">
+		<div class="card-header rounded-0 bg-white hstack justify-content-between">
+			<div class="card-title fw-bold mb-0">
+				GIỎ HÀNG
+			</div>
+			<button class="link-default" id="closeCart">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+				     stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+					<line x1="18" y1="6" x2="6" y2="18"></line>
+					<line x1="6" y1="6" x2="18" y2="18"></line>
+				</svg>
+			</button>
+		</div>
+		<div class="card-body p-0 flex-fill vstack h-100">
+			<div class="card-list position-relative flex-fill">
+				<div class="card-scroll position-absolute top-0 start-0 bottom-0 end-0 mh-100">
+					<div id="cardList"
+					     class="card-list position-absolute top-0 start-0 bottom-0 end-0 mh-100"></div>
+					<div class="card-empty text-center">
+						<div class="card-icon">
+							<img src="./assets/images/icon/empty-cart.avif" class="img-fluid" alt="">
+						</div>
+						<div class="card-title">
+							Giỏ hàng của bạn đang trống
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="card-information">
+				<div class="card-total hstack justify-content-between">
+					<div class="card-text">
+						Tạm tính:
+					</div>
+					<div class="card-value">1.050.000đ</div>
+				</div>
+				<div class="card-button">
+					<a href="" class="button-theme button-theme_primary w-100">
+						Thanh toán <i class="fal fa-angle-right lh-base ms-2 fz-20"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="floating-overlay" id="floatingOverlay"></div>
+</div>
+
+<div class="floating-social">
+	<div class="social-item">
+		<i class="fab fa-facebook-messenger"></i>
+		<a href="" class="stretched-link"></a>
+	</div>
+	<div class="social-item">
+		<i class="fab fa-facebook-messenger"></i>
+		<a href="" class="stretched-link"></a>
+	</div>
+	<div class="social-item">
+		<i class="fas fa-phone-alt"></i>
+		<a href="" class="stretched-link"></a>
+	</div>
+</div>
+
+<script type=" text/javascript" src="./assets/plugins/jquery.min.js"></script>
+<script type="text/javascript"
+        src="./assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/swiper/swiper-bundle.min.js"></script>
+<script type="text/javascript" src="./assets/plugins/fancybox/fancybox.min.js"></script>
+<script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+</html>
