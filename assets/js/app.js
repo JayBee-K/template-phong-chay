@@ -108,6 +108,19 @@ let handleCallMenu = function () {
     }
 }
 
+const handleStickHeader = function () {
+    $(window).scroll(function (e) {
+        if ($(document).scrollTop() > $('#header').innerHeight()) {
+            $('#header').addClass('is-scroll');
+            $('#header-category').removeClass('is-default is-show');
+        } else {
+            $('#header').removeClass('is-scroll');
+            if ($('body').hasClass('is-home') == true) {
+                $('#header-category').addClass('is-default');
+            }
+        }
+    });
+}
 
 const handleCategoryBar = function () {
     const buttonCall = $('#callCategory');
@@ -208,6 +221,10 @@ const handleSliderTabsProduct = function () {
                     },
                     1200: {
                         slidesPerView: 4,
+                        grid: {
+                            rows: 1,
+                            fill: "column",
+                        },
                     }
                 },
                 navigation: {
@@ -242,6 +259,38 @@ const handleSliderIntroduction = function () {
                 1200: {
                     slidesPerView: 4,
                 }
+            },
+        });
+    }
+}
+
+const handleSliderArticleRelated = function () {
+    if ($('#slider-articleRelated').length) {
+        new Swiper('#slider-articleRelated .swiper', {
+            speed: 1000,
+            slidesPerView: 4,
+            preloadImages: false,
+            spaceBetween: 16,
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.25,
+                    spaceBetween: 10,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                    spaceBetween: 10,
+                },
+                991: {
+                    slidesPerView: 3.5,
+                    spaceBetween: 10,
+                },
+                1200: {
+                    slidesPerView: 4,
+                }
+            },
+            navigation: {
+                nextEl: "#slider-articleRelated .slider-button_next",
+                prevEl: "#slider-articleRelated .slider-button_prev",
             },
         });
     }
@@ -358,6 +407,27 @@ const handleCart = function () {
     }
 }
 
+const handleContentArticle = function () {
+    if ($("#article-content img").length > 0) {
+        $("#article-content img").each((index, elm) => {
+            $(elm).wrap(`<a style="cursor: zoom-in" href="${$(elm).attr("src")}" data-caption="${$(elm).attr("alt")}" data-fancybox="article-detail"></a>`);
+        });
+
+        Fancybox.bind(`[data-fancybox=article-detail]`, {
+            thumbs: {
+                autoStart: true,
+            },
+        });
+    }
+
+    if ($('#article-content table').length > 0) {
+        $('#article-content table').map(function () {
+            $(this).addClass('table table-bordered');
+            $(this).wrap('<div class="table-responsive"></div>');
+        })
+    }
+}
+
 $(function () {
     handleApplyCollapse($('#header-navigation > ul'), true, true);
     handleCallMenu();
@@ -365,10 +435,13 @@ $(function () {
         handleApplyCollapse($('#header-navigation > ul'));
         handleCallMenu();
     });
+    handleStickHeader();
     handleCategoryBar();
     handleSliderHero();
     handleSliderService();
     handleSliderTabsProduct();
     handleSliderIntroduction();
     handleCart();
+    handleContentArticle();
+    handleSliderArticleRelated();
 });
