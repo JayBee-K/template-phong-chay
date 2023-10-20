@@ -2993,4 +2993,12 @@
 		height: 40px;
 		font-size: 1.5em;
 	}
+
+	.floating-cart .cart-card {
+		width: 320px;
+	}
+
+	.page-heading {
+		flex-direction: column;
+	}
 }
