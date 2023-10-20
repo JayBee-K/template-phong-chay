@@ -407,13 +407,10 @@ const handleSliderImagesProduct = function () {
 				spaceBetween: 12,
 				breakpoints: {
 					320: {
-						slidesPerView: 1.5,
+						slidesPerView: 3.5,
 					},
 					768: {
-						slidesPerView: 2.5,
-					},
-					991: {
-						slidesPerView: 3.5,
+						slidesPerView: 4.5,
 					},
 					1199: {
 						slidesPerView: 5,
@@ -453,7 +450,7 @@ const handleSliderProductRelated = function () {
 			spaceBetween: 16,
 			breakpoints: {
 				320: {
-					slidesPerView: 1.25,
+					slidesPerView: 1.5,
 					spaceBetween: 10,
 				},
 				768: {

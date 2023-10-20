@@ -2028,7 +2028,7 @@
 	position: relative;
 }
 
-.detail-content:before {
+.detail-content blockquote:before {
 	position: absolute;
 	content: "\f10d";
 	font-family: "Font Awesome 5 Pro";
@@ -2293,6 +2293,12 @@
 	border-top: 0;
 }
 
+@media screen and (max-width: 1400px) {
+	.product-detail .product-images .product-avatar [class*=slider-button] {
+		top: calc(100% + 55px);
+	}
+}
+
 @media screen and (min-width: 992px) {
 	.header .header-navigation > ul > li:hover > a {
 		background-color: rgba(var(--bs-black-rgb), .1);
@@ -2528,39 +2534,67 @@
 		font-size: 1em;
 	}
 
-	.article-detail .article-title {
+	.page-heading .heading-title {
 		font-size: 1.5em;
 	}
 
-	.article-detail .article-content,
-	.product-detail .product-content {
-		font-size: 1.075em;
+	.article-detail .article-title, .product-detail .product-title {
+		font-size: 1.5em;
 	}
 
-	.article-detail .article-content h2,
-	.product-detail .product-content h2 {
-		font-size: 1.3em;
+	.product-detail .product-price .price-current {
+		font-size: 1.5em;
 	}
 
-	.article-detail .article-content h3,
-	.product-detail .product-content h3 {
-		font-size: 1.225em;
-	}
-
-	.article-detail .article-content h4,
-	.product-detail .product-content h4 {
+	.product-detail .product-price .price-old {
 		font-size: 1.15em;
 	}
 
-	.article-detail .article-content h5,
-	.product-detail .product-content h5 {
+	.product-detail .product-meta,
+	.product-detail .product-desc {
+		font-size: 1em;
+		margin-top: 15px;
+	}
+
+	.product-detail .product-support {
+		margin-top: 15px;
 		font-size: 1.075em;
 	}
 
-	.article-detail .article-content h6,
-	.product-detail .product-content h6 {
+	.product-detail .product-quantity,
+	.product-detail .product-buttons {
+		margin-top: 30px;
+	}
+
+	.product-detail .product-tabs .nav-tabs .nav-item .nav-link {
+		font-size: 1.15em;
+		padding: 10px 30px;
+	}
+
+	.detail-content {
 		font-size: 1em;
 	}
+
+	.detail-content h2 {
+		font-size: 1.3em;
+	}
+
+	.detail-content h3 {
+		font-size: 1.225em;
+	}
+
+	.detail-content h4 {
+		font-size: 1.15em;
+	}
+
+	.detail-content h5 {
+		font-size: 1.075em;
+	}
+
+	.detail-content h6 {
+		font-size: 1em;
+	}
+
 }
 
 @media screen and (max-width: 991px) {
@@ -2905,6 +2939,14 @@
 	.section-breadcrumb .breadcrumb .breadcrumb-item:nth-child(1),
 	.section-breadcrumb .breadcrumb .breadcrumb-item:nth-child(2) {
 		display: block;
+	}
+
+	.slider-theme [class*=slider-button] {
+		display: none;
+	}
+
+	.product-detail .product-images .product-thumb {
+		padding: 0;
 	}
 }
 
