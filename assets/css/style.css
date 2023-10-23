@@ -1267,6 +1267,11 @@
     opacity: 1;
 }
 
+.floating-cart {
+	position: relative;
+	z-index: 22;
+}
+
 .floating-cart .cart-card {
     -webkit-transition: visibility .5s cubic-bezier(.645, .045, .355, 1), opacity .5s cubic-bezier(.645, .045, .355, 1), -webkit-transform .5s cubic-bezier(.645, .045, .355, 1);
     transition: visibility .5s cubic-bezier(.645, .045, .355, 1), opacity .5s cubic-bezier(.645, .045, .355, 1), -webkit-transform .5s cubic-bezier(.645, .045, .355, 1);
