@@ -1268,8 +1268,8 @@
 }
 
 .floating-cart {
-	position: relative;
-	z-index: 22;
+    position: relative;
+    z-index: 22;
 }
 
 .floating-cart .cart-card {
@@ -1597,6 +1597,88 @@
 .floating-social .social-item:hover {
     background-color: var(--primary-color);
     color: var(--bs-white);
+}
+
+.checkout-wrapper {
+    background: rgba(var(--primary-rgb), .075);
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.checkout-form .form-control {
+    font-size: 1.075em;
+    color: var(--bs-black);
+}
+
+.checkout-form input.form-control {
+    height: 44px;
+}
+
+.checkout-list {
+    background: #fafafa;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.checkout-products .product-item .product-image {
+    width: 70px;
+    height: 70px;
+    background-color: var(--bs-white);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border: 1px solid var(--bs-gray-300);
+}
+
+.checkout-products .product-item .product-image img {
+    height: 65px;
+    width: 65px;
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+.checkout-products .product-item .product-quantity {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bs-white);
+    background-color: var(--primary-color);
+    font-size: .85em;
+    top: -5px;
+    right: -5px;
+}
+
+.checkout-products .product-item .product-title {
+    font-size: 1em;
+    color: var(--bs-black);
+    margin-bottom: 5px;
+    transition: var(--transition-default);
+}
+
+.checkout-products .product-item .product-price {
+    font-size: 1em;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.checkout-total{
+    border-top: 1px solid var(--bs-gray-400);
+    margin-top: 24px;
+    padding-top: 24px;
+    font-size: 1.3em;
+    color: var(--bs-black);
+    font-weight: 700;
+}
+
+.checkout-total .checkout-total_value {
+    color: var(--primary-color);
 }
 
 .contact-list .contact-item {

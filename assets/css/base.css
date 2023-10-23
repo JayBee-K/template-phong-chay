@@ -280,3 +280,7 @@ input[type='number'] {
 .fz-24 {
     font-size: 1.75em;
 }
+
+.fw-medium {
+    font-weight: 500;
+}
