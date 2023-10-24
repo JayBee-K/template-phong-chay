@@ -669,7 +669,6 @@
     padding: 11.4px 15px;
     font-size: 1em;
     position: relative;
-    white-space: nowrap;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
