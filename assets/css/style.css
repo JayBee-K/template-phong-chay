@@ -288,6 +288,11 @@
     font-size: 1.15em;
 }
 
+.button-theme.button-theme_extralarge {
+	padding: 12px 40px;
+	font-size: 1.3em;
+}
+
 .button-theme.button-theme_primary {
     color: var(--bs-white);
     background: var(--primary-color);
