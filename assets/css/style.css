@@ -704,7 +704,6 @@
 }
 
 .header.is-scroll {
-    transform: translateY(-41px);
     position: fixed;
     width: 100%;
     top: 0;
@@ -3342,10 +3341,6 @@
     .is-overflow {
         height: 100vh;
         overflow: hidden;
-    }
-
-    .header.is-scroll {
-        transform: translateY(-31px);
     }
 
     .contact-list .contact-item .contact-heading .contact-heading_title {
