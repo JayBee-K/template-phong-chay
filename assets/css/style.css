@@ -2191,7 +2191,7 @@
 .detail-content ul,
 .detail-content ol,
 .detail-content blockquote {
-	margin-bottom: 30px;
+	margin-bottom: 16px;
 }
 
 .detail-content ul,
@@ -2337,10 +2337,10 @@
 }
 
 .product-detail .product-images .product-avatar [class*=slider-button] {
-	width: 35px;
-	height: 35px;
+	width: 32px;
+	height: 32px;
 	font-size: 1.5em;
-	top: calc(100% + 62px);
+	top: calc(100% + 50px);
 	position: absolute;
 }
 
@@ -2903,7 +2903,7 @@
 
 @media screen and (max-width: 1400px) {
 	.product-detail .product-images .product-avatar [class*=slider-button] {
-		top: calc(100% + 55px);
+		top: calc(100% + 40px);
 	}
 }
 

@@ -482,10 +482,13 @@ const handleSliderImagesProduct = function () {
 						slidesPerView: 3.5,
 					},
 					768: {
-						slidesPerView: 4.5,
+						slidesPerView: 3.5,
+					},
+					991: {
+						slidesPerView: 4,
 					},
 					1199: {
-						slidesPerView: 5,
+						slidesPerView: 4,
 					}
 				},
 				autoplay: false,
