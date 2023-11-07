@@ -2901,6 +2901,10 @@
 	font-size: 1.075em;
 }
 
+.design-card {
+	height: 100%;
+}
+
 .design-card .card-body {
 	display: flex;
 	flex-direction: column;
@@ -2923,6 +2927,11 @@
 
 .design-card .card-text {
 	color: var(--bs-gray-800);
+	font-size: 1.075em;
+}
+
+.design-card .card-text i{
+	width: 16px;
 }
 
 @media screen and (max-width: 1400px) {
